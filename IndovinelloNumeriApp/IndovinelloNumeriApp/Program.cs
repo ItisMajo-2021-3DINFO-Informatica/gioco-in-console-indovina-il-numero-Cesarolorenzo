@@ -15,10 +15,15 @@ namespace IndovinelloNumeriApp
             {
                 tentativi++;
                 numero = Convert.ToInt32(Console.ReadLine());
-                if (numero < n)    
-            {
+                if (numero < n)
+                {
                     Console.WriteLine("il numero inserito è troppo basso");
-                
+
+                }
+                else if (numero > 100 && numero < 0)
+                {
+                    Console.WriteLine("il numero inserito non è valido");
+                    tentativi--;
                 }
                 else if (numero > n)
                 {
